@@ -1,0 +1,18 @@
+
+import java.util.HashMap;
+import java.util.Map;
+class Solution {
+    public String restoreString(String s, int[] indices) {
+     Map <Integer,Character> shuffle =new HashMap<>();
+
+     for(int i=0;i<indices.length;i++){
+         shuffle.put(indices[i],s.charAt(i));
+     }
+     StringBuilder str=new StringBuilder();
+
+     for(int i=0;i<indices.length;i++){
+         str.append(shuffle.get(i));
+     }
+     return str.toString();
+    }
+}
